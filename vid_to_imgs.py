@@ -37,8 +37,18 @@ def vids_to_imgs(video: str, data: str, interval: int):
             print('Creating...' + name)
 
             # writing the extracted images
-            cv2.imwrite(name, frame)
-
+            width, height = frame.shape[1], frame.shape[0]
+            crop = 0
+            offsetH = 0
+            offsetW = 0
+            if width < height:
+                crop = width
+                offsetH = int((height - width) / 2)
+            else:
+                crop = height
+                offsetW = int((width - height) / 2)
+            cv2.imwrite(name, frame[offsetH:(crop + offsetH), offsetW:(crop + offsetW)])
+            
             # increasing counter so that it will
             # show how many frames are created
             currentframe += 1
