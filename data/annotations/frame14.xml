@@ -1,0 +1,23 @@
+<annotation>
+    <folder>images</folder>
+    <filename>frame14.jpg</filename>
+    <size>
+        <width>512</width>
+        <height>512</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>shark</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <occluded>0</occluded>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>256</xmin>
+            <ymin>154</ymin>
+            <xmax>329</xmax>
+            <ymax>228</ymax>
+        </bndbox>
+    </object>
+</annotation>
